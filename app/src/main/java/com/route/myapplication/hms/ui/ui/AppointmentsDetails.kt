@@ -4,6 +4,7 @@ import java.util.*
 
 data class AppointmentsDetails(val patientID: Int,
                                var name : String,
-                               var day : String,
-                               var date: String,
+                               var gender : String,
+                               var age: Int,
+                               var time_convension :String,
                                var time : String)

@@ -1,108 +1,329 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:background="@drawable/inpatient_card_stroke"
+    >
 
-    <TextView
-        android:id="@+id/patient_name_tv"
+
+    <LinearLayout
+        android:id="@+id/patient_card"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center_vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Patient Name"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:padding="15dp"
-        android:background="@drawable/patient_name_design"/>
+        android:background="@drawable/patient_name_design"
+        android:backgroundTint="#FF9E80">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Ahmed "
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/blueDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <ImageView
+                android:id="@+id/dischargeImg"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_discharge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="discharge patient"
+                android:textColor="@color/grayDark"
+                android:textSize="12sp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dischargeImg"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/patient_fname"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:text="Ahmed "-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:textColor="@color/blueDark"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_lname"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="Ali"-->
+<!--            android:layout_weight="1"-->
+
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:textColor="@color/blueDark"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="discharge"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/grayDark"
+            android:textSize="15sp"
+            android:gravity="end"
+            android:layout_marginEnd="5dp"
+            />
+
+    </LinearLayout>
+
+
     <View
         android:id="@+id/HLine"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/blue"
-        app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
+        app:layout_constraintTop_toBottomOf="@id/patient_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+
     <LinearLayout
-        android:id="@+id/linear_outpatient_details"
-        android:layout_width="match_parent"
+        android:id="@+id/linear_patient_titles"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         app:layout_constraintTop_toBottomOf="@id/HLine"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/patient_view_design"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/patient_detailsID_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ID:"
-            android:textSize="20sp"
-            android:padding="17dp"
-            android:layout_margin="10dp"/>
-        <TextView
-            android:id="@+id/patient_detailsGender_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gender:"
-            android:textSize="20sp"
-            android:padding="7dp"
-            android:layout_margin="10dp"/>
+        app:layout_constraintBottom_toTopOf="@id/linear_container"
+        app:layout_constraintEnd_toStartOf="@id/linear_patient_details"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsID_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="National Id:"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="20sp" />-->
 
         <TextView
             android:id="@+id/patient_detailsPhone_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PhoneNumber:"
-            android:textSize="20sp"
-            android:padding="7dp"
-            android:layout_margin="10dp"/>
+            android:text="Phone Number:"
+            android:textAlignment="center"
+
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/patient_detailsAge_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_patient_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/HLine"
+        app:layout_constraintStart_toEndOf="@id/linear_patient_titles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linear_container"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+<!--        <TextView-->
+<!--            android:id="@+id/patient_id"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="01000101001010"-->
+<!--            android:textSize="19sp" />-->
+
+
+        <TextView
+            android:id="@+id/patient_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="01091983199"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/patient_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="22"
+            android:textSize="20sp" />
     </LinearLayout>
 
 
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linear_outpatient_details"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/HLine"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:background="@drawable/patient_view_design"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsID_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="ID:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="17dp"-->
+<!--            android:layout_margin="10dp"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsGender_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Gender:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
 
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsPhone_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="PhoneNumber:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
+<!--    </LinearLayout>-->
 
 
     <LinearLayout
-        android:id="@+id/patient_options"
+        android:id="@+id/linear_container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:weightSum="4"
-        android:gravity="center"
-        app:layout_constraintHeight_percent="0.2"
-        app:layout_constraintTop_toBottomOf="@id/linear_outpatient_details"
-        android:background="@drawable/patient_options_design">
+        android:layout_height="wrap_content"
+        android:background="@drawable/patient_options_design"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_patient_titles"
+        android:layout_marginTop="5dp"
+        >
 
-        <ImageView
-            android:id="@+id/vitalSignsImg"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_vitalsigns" />
 
-        <ImageView
-            android:id="@+id/test"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+        <LinearLayout
+            android:id="@+id/patient_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_test"/>
-        <ImageView
-            android:id="@+id/report"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            app:layout_constraintTop_toBottomOf="@id/linear_patient_titles">
+
+            <ImageView
+                android:id="@+id/vitalSignsImg"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_vitalsigns" />
+
+            <ImageView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_test" />
+            <ImageView
+                android:id="@+id/scan"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_scan" />
+
+            <ImageView
+                android:id="@+id/report"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_medical_record" />
+
+            <ImageView
+                android:id="@+id/medication"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_medicien" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/first_row_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_file"/>
-        <ImageView
-            android:id="@+id/medication"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_medicien"/>
+            android:orientation="horizontal"
+            android:weightSum="5"
+            app:layout_constraintTop_toBottomOf="@id/first_row_img">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Vitals"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lab"
+                android:textAlignment="center" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Scan"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Record"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Prescription"
+                android:textAlignment="center"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
 
     </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

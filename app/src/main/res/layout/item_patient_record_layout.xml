@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/inpatient_card_stroke"
+
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/datedLayout"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:padding="5dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:background="@drawable/patient_name_design"
+    android:backgroundTint="#B9F6CA">
+    <LinearLayout
+        android:id="@+id/patient_card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/patient_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Enter Date"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/patient_fname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exit Date "
+            android:textAlignment="center"
+            android:textColor="@color/blueDark"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginStart="50dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/enterDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="2022-06-29"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/exitDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2022-06-30 "
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/blueDark"
+            android:textSize="20sp"
+            android:layout_marginStart="50dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <View
+        android:id="@+id/HLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/datedLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/recordCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/HLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear_container"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:padding="3dp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/HLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linear_container"
+            app:layout_constraintEnd_toStartOf="@id/linear_patient_details"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room:"
+                android:textSize="15sp"
+                android:layout_margin="7dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room No:"
+                android:textSize="15sp"
+                android:padding="7dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/HLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linear_container"
+            app:layout_constraintEnd_toStartOf="@id/linear_patient_details"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/roomType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Common"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:id="@+id/roomNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="2"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:layout_margin="5dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/HLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linear_container"
+            app:layout_constraintEnd_toStartOf="@id/linear_patient_details"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Floor No:"
+                android:textSize="15sp"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bed No:"
+                android:textSize="15sp"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/HLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linear_container"
+            app:layout_constraintEnd_toStartOf="@id/linear_patient_details"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/floorNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="3"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_margin="5dp"/>
+            <TextView
+                android:id="@+id/bedNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="5"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linear_patient_titles"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/HLine"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/linear_container"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/linear_patient_details"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsID_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Room Type:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsAge_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Patient Age:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsPhone_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Phone Number:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linear_patient_details"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/HLine"-->
+<!--        app:layout_constraintStart_toEndOf="@id/linear_patient_titles"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/linear_container"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_id"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="01000101001010"-->
+<!--            android:textSize="19sp"-->
+<!--            android:layout_margin="17dp"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_age"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="22"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/patient_phoneNumber"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:text="01091983199"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
+<!--    </LinearLayout>-->
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linear_outpatient_details"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/HLine"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:background="@drawable/patient_view_design"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsID_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="ID:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="17dp"-->
+<!--            android:layout_margin="10dp"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsGender_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Gender:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/patient_detailsPhone_tv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="PhoneNumber:"-->
+<!--            android:textSize="20sp"-->
+<!--            android:padding="7dp"-->
+<!--            android:layout_margin="10dp"/>-->
+<!--    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/linear_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/patient_options_design"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recordCard">
+
+
+        <LinearLayout
+            android:id="@+id/patient_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@id/linear_patient_titles">
+
+
+
+            <ImageView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_test" />
+            <ImageView
+                android:id="@+id/scan"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_scan" />
+
+            <ImageView
+                android:id="@+id/report"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_file" />
+
+            <ImageView
+                android:id="@+id/medication"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_medicien" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/first_row_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintTop_toBottomOf="@id/first_row_img">
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lab"
+                android:textAlignment="center" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Scan"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Report"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Prescription"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

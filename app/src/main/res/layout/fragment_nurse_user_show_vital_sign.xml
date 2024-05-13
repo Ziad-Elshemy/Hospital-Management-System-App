@@ -113,7 +113,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintTop_toBottomOf="@id/HLine"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:listitem="@layout/item_appointment_layout"/>
+                tools:listitem="@layout/item_nurse_inpatient_vitalsigns_layout"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

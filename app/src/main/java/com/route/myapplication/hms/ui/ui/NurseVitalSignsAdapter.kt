@@ -3,6 +3,7 @@ package com.route.myapplication.hms.ui.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.route.myapplication.hms.R
@@ -10,8 +11,8 @@ import com.route.myapplication.hms.R
 class NurseVitalSignsAdapter(var items :List<NurseVitalSignsDetails>) : RecyclerView.Adapter<NurseVitalSignsAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var date: TextView = itemView.findViewById(R.id.date_tv_nurse)
-        var time: TextView = itemView.findViewById(R.id.Time_tv_nurse)
-        var weight: TextView = itemView.findViewById(R.id.weight_tv_nurse)
+//        var time: TextView = itemView.findViewById(R.id.Time_tv_nurse)
+        var Ecg: ImageView = itemView.findViewById(R.id.Image_ecg_nurse)
         var bloodPressure: TextView = itemView.findViewById(R.id.bloodPressure_tv_nurse)
         var pulseRate: TextView = itemView.findViewById(R.id.pulseRate_tv_nurse)
         var temperature: TextView = itemView.findViewById(R.id.temprature_tv_nurse)
@@ -30,8 +31,12 @@ class NurseVitalSignsAdapter(var items :List<NurseVitalSignsDetails>) : Recycler
         var item = items[position]
 
         holder.date.setText(item.Date.toString())
-        holder.time.setText(item.Time.toString())
-        holder.weight.setText(item.Weight.toString())
+//        holder.time.setText(item.Time.toString())
+
+
+            holder.Ecg.setImageResource(R.drawable.ic_heart)
+
+
         holder.bloodPressure.setText(item.BloodPressure.toString())
 
         holder.pulseRate.setText(item.PulseRate.toString())

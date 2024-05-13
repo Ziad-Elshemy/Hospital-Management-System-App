@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/addNewPrescribtionLinearLayout"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/medicine_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/nurse_medicine_design">
+
+
+                        <TextView
+                            android:id="@+id/medicine_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Medicine"
+                            android:textColor="@color/blue"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:weightSum="2"
+                    app:layout_constraintTop_toBottomOf="@id/medicine_card_title"
+                    app:layout_constraintStart_toStartOf="@id/medicine_card_title"
+                    android:background="@drawable/patient_view_design"
+                    >
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_medicine_first_half"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/patient_medicineName_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Medicine Name:"
+                                    android:textSize="15sp" />
+
+                                <EditText
+                                    android:id="@+id/patient_medicineName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15sp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/inputtext_reg_design"/>
+                                <TextView
+                                    android:id="@+id/patient_medicineDuration_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Midecine Duration:"
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="7dp"/>
+                                <Spinner
+                                    android:id="@+id/durationSpinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/inputtext_reg_design"
+                                    android:entries="@array/DurationOptions"
+                                    android:padding="5dp"
+                                    android:popupBackground="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/patient_medicineDose_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Midecine Dose:"
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="7dp"/>
+
+                                <Spinner
+                                    android:id="@+id/doseSpinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/inputtext_reg_design"
+                                    android:entries="@array/DoseOptions"
+                                    android:padding="5dp"
+                                    android:popupBackground="@color/white" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linear_medicine_second_half"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp">
+                                <TextView
+                                    android:id="@+id/patient_medicineType_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Medicine Type:"
+                                    android:textSize="15sp" />
+
+                                <Spinner
+                                    android:id="@+id/medicinetypeSpinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/inputtext_reg_design"
+                                    android:entries="@array/MedicineTypeOptions"
+                                    android:padding="5dp"
+                                    android:popupBackground="@color/white"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/patient_medicineStrngth_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Midecine Concentration:"
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="7dp"/>
+
+                                <EditText
+                                    android:id="@+id/patient_medicineStrength"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15sp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/inputtext_reg_design"/>
+
+
+                                <TextView
+                                    android:id="@+id/patient_medicineInstruction_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Instructions:"
+                                    android:textSize="15sp"
+                                    android:layout_marginTop="7dp"/>
+
+                                <EditText
+                                    android:id="@+id/patient_medicineInstructions"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15sp"
+                                    android:padding="5dp"
+                                    android:background="@drawable/inputtext_reg_design"/>
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="3"
+                    app:layout_constraintTop_toBottomOf="@id/content_layout"
+                    app:layout_constraintStart_toStartOf="@id/content_layout"
+                    android:background="@drawable/patient_options_design"
+                    android:backgroundTint="#EFF8FF">
+                        <Button
+                            android:id="@+id/prescription_submitbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Save"
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/blue"
+                            android:backgroundTint="#C9DFF2"/>
+<!--                        <Button-->
+<!--                            android:id="@+id/prescription_editbtn"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="edit"-->
+<!--                            android:textColor="@color/blue"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:layout_margin="5dp"-->
+<!--                            android:backgroundTint="#C9DFF2" />-->
+                        <Button
+                            android:id="@+id/prescription_cancelbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cancel"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue"
+                            android:layout_weight="1"
+                            android:layout_margin="5dp"
+                            android:backgroundTint="#C9DFF2"/>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+

@@ -51,6 +51,7 @@ class PatientsFragment : Fragment() {
             items.add(PatientDetails(R.drawable.ic_doctor, "Ziad", "01111111111","a.bb@yahoo.com","male",23,"address","010999999","A"))
 
         }
+
         return items
     }
 

@@ -7,241 +7,260 @@
     android:layout_height="match_parent"
     tools:context=".ui.DoctorUserFragments.VitalSignsFragment">
 
-    <TextView
-        android:id="@+id/title"
+    <ScrollView
+        android:id="@+id/vertical_scroll"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vital Signs Patient Record"
-        android:padding="10dp"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/blue"
+        android:layout_height="match_parent"
         android:layout_marginTop="70dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <HorizontalScrollView
-        android:id="@+id/Hview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="10dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:padding="10dp"
+                android:text="Vital Signs Patient Record"
+                android:textColor="@color/blue"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
             <TextView
                 android:id="@+id/patient_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Patient's Name:"
-                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Patient Name:"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
 
             <TextView
                 android:id="@+id/patient_name"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="Amira"
-                android:textSize="20sp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
                 app:layout_constraintStart_toEndOf="@id/patient_name_tv"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-
-
-            <TextView
-                android:id="@+id/patient_gender_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gender:"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:layout_marginStart="70dp"
-                app:layout_constraintStart_toEndOf="@id/patient_name"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
-                android:id="@+id/patient_gender"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Female"
-                android:textSize="20sp"
-                android:layout_marginStart="5dp"
-                app:layout_constraintStart_toEndOf="@id/patient_gender_tv"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
-                android:id="@+id/patient_age_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Age:"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:layout_marginStart="70dp"
-                app:layout_constraintStart_toEndOf="@id/patient_gender"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
-                android:id="@+id/patient_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="50"
-                android:textSize="20sp"
-                android:layout_marginStart="5dp"
-                app:layout_constraintStart_toEndOf="@id/patient_age_tv"
-                app:layout_constraintTop_toTopOf="parent"/>
-
+                app:layout_constraintTop_toBottomOf="@id/title"
+                tools:text="ahmed Ali" />
 
 
             <TextView
-                android:id="@+id/date_tv"
+                android:id="@+id/StartTime_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_marginTop="30dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Start Date:"
+                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
-                />
+                app:layout_constraintTop_toBottomOf="@id/patient_name_tv" />
+
+            <EditText
+                android:id="@+id/date_input"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/inputtext_reg_design"
+                android:hint="SELECT DATE"
+                android:inputType="none"
+                android:padding="5dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/StartTime_tv"
+                app:layout_constraintTop_toBottomOf="@id/patient_name_tv" />
+
 
             <TextView
-                android:id="@+id/Time_tv"
+                android:id="@+id/EndTime_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Time"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:text="End Date:"
                 android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/date_tv"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
-                android:layout_marginStart="160dp"
-                android:layout_marginTop="30dp"/>
-            <TextView
-                android:id="@+id/weight_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Weight"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/Time_tv"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="30dp"/>
+                app:layout_constraintStart_toStartOf="@+id/StartTime_tv"
+                app:layout_constraintTop_toBottomOf="@id/StartTime_tv" />
 
-            <TextView
-                android:id="@+id/bloodPressure_tv"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/end_date_input"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Blood Pressure"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/weight_tv"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
-                android:layout_marginStart="140dp"
-                android:layout_marginTop="30dp"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/inputtext_reg_design"
+                android:hint="SELECT DATE"
+                android:inputType="none"
+                android:padding="5dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/EndTime_tv"
+                app:layout_constraintTop_toBottomOf="@id/StartTime_tv" />
 
-            <TextView
-                android:id="@+id/pulseRate_tv"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/getVitals_btn"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="Pulse Rate"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/bloodPressure_tv"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
                 android:layout_marginStart="100dp"
-                android:layout_marginTop="30dp"/>
-            <TextView
-                android:id="@+id/temprature_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Temprature"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:padding="5dp"
+                android:text="Get Vitals"
                 android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/pulseRate_tv"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
-                android:layout_marginStart="140dp"
-                android:layout_marginTop="30dp"/>
-            <TextView
-                android:id="@+id/respiratoryRate_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Raspiratory Rate"
-                android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/temprature_tv"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="30dp"/>
-            <TextView
-                android:id="@+id/signature_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Signature"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/respiratoryRate_tv"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="30dp"/>
-
-            <TextView
-                android:id="@+id/comments_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Comments"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/signature_tv"
-                app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
+                app:layout_constraintStart_toStartOf="@id/StartTime_tv"
+                app:layout_constraintTop_toBottomOf="@id/EndTime_tv" />
 
             <View
-                android:id="@+id/HLine"
+                android:id="@+id/Line"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="30dp"
                 android:background="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/date_tv" />
+                app:layout_constraintTop_toBottomOf="@id/getVitals_btn" />
 
+            <TextView
+                android:id="@+id/no_items_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="30dp"
+                android:text="No items"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Line" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/no_items_tv"
+                app:layout_constraintTop_toTopOf="@id/no_items_tv" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_vitals_titles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Line">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="Time"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="20sp"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    android:layout_marginTop="30dp"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=" Ecg"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Pressure"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Puls Rate"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=" Temperature"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=" Respiration Rate"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=" Signature"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=" Comments"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/NurseInpatientVitalSigns_recyclerView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginEnd="20dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/HLine"
-                tools:listitem="@layout/item_inpatient_vitalsigns_layout" />
+                app:layout_constraintStart_toEndOf="@id/layout_vitals_titles"
+                app:layout_constraintTop_toTopOf="@id/layout_vitals_titles"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:listitem="@layout/item_nurse_inpatient_vitalsigns_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </HorizontalScrollView>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

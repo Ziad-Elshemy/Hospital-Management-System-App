@@ -53,10 +53,6 @@ class UserDoctorActivity : AppCompatActivity() {
             {
                 pushFragment(DoctorUserAppointmentsFragment(),menuItem.title.toString())
 
-            } else if(menuItem.itemId == R.id.nav_outpatient_doctor)
-            {
-                pushFragment(DoctorUserOutpatientFragment(),menuItem.title.toString())
-
             }
             else if(menuItem.itemId == R.id.nav_inpatient_doctor)
             {
@@ -65,7 +61,9 @@ class UserDoctorActivity : AppCompatActivity() {
             }
             else if(menuItem.itemId == R.id.nav_logout_doctor)
             {
-                pushFragment(DoctorUserLogoutFragment(),menuItem.title.toString())
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
 
             }
 

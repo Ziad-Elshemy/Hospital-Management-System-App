@@ -6,41 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".ui.DoctorUserFragments.DoctorUserInpatientFragment">
 
-    <EditText
-        android:id="@+id/search_inpatient"
-        android:drawableStart="@drawable/ic_search"
+<!--    <EditText-->
+<!--        android:id="@+id/search_inpatient"-->
+<!--        android:drawableStart="@drawable/ic_search"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:drawablePadding="10dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:hint="Search using national id"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="70dp"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/search_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="search"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:backgroundTint="@color/blue"-->
+<!--        app:layout_constraintStart_toEndOf="@id/search_inpatient"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginStart="50dp"-->
+<!--        android:layout_marginEnd="10dp"/>-->
+
+    <TextView
+        android:id="@+id/inpatientTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawablePadding="10dp"
-        android:layout_marginStart="20dp"
-        android:hint="Search for patient's id"
-        android:textColor="@color/black"
-        android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="70dp"/>
-
-    <Button
-        android:id="@+id/allinpatients_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="all"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/blue"
-        app:layout_constraintStart_toEndOf="@id/search_inpatient"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="70dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginTop="80dp"
+        android:text="Your Inpatients"
+        android:textSize="25sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Doctorinpatient_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/search_inpatient"
+        app:layout_constraintTop_toBottomOf="@id/inpatientTitle"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_inpatient_layout"/>
 

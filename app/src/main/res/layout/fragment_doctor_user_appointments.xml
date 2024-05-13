@@ -5,121 +5,143 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DoctorUserFragments.NurseUserAddVitalSignFragment">
+    tools:context=".ui.DoctorUserFragments.DoctorUserAppointmentsFragment">
 
-
-    <HorizontalScrollView
-        android:id="@+id/Hview"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:scrollbars="horizontal"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp">
+        android:text="Today's Consultations "
+        android:textSize="28sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/id_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Id"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
-            <TextView
-                android:id="@+id/name_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/id_text_view"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="10dp"/>
-            <TextView
-                android:id="@+id/day_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Day"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/name_text_view"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="10dp"/>
-            <TextView
-                android:id="@+id/date_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/day_text_view"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="140dp"
-                android:layout_marginTop="10dp"/>
-
-            <TextView
-                android:id="@+id/time_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Time"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/date_text_view"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="200dp"
-                android:layout_marginTop="10dp"/>
-            <TextView
-                android:id="@+id/action_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Action"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                app:layout_constraintStart_toEndOf="@id/time_text_view"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="230dp"
-                android:layout_marginTop="10dp"/>
-
-            <View
-                android:id="@+id/HLine"
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:background="@color/black"
-                app:layout_constraintTop_toBottomOf="@id/action_text_view"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="5dp"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/DoctorAppointment_recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintTop_toBottomOf="@id/HLine"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:listitem="@layout/item_appointment_layout"/>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/consultations_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_doctor_appointment"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/id_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Id"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/name_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Name"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintStart_toEndOf="@id/id_text_view"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginStart="100dp"-->
+<!--                android:layout_marginTop="10dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/day_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Day"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintStart_toEndOf="@id/name_text_view"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginStart="130dp"-->
+<!--                android:layout_marginTop="10dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/date_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Date"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintStart_toEndOf="@id/day_text_view"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginStart="140dp"-->
+<!--                android:layout_marginTop="10dp"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/time_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Time"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintStart_toEndOf="@id/date_text_view"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginStart="200dp"-->
+<!--                android:layout_marginTop="10dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/action_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Action"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintStart_toEndOf="@id/time_text_view"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:layout_marginStart="230dp"-->
+<!--                android:layout_marginTop="10dp"/>-->
+
+<!--            <View-->
+<!--                android:id="@+id/HLine"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/black"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/action_text_view"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:layout_marginTop="5dp"/>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/DoctorAppointment_recyclerView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/HLine"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                tools:listitem="@layout/item_appointment_layout"/>-->
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </HorizontalScrollView>-->
+
+
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

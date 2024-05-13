@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.NurseUserFragments.NurseUserReservePatientFragment">
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        >-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            >-->
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Reserve Patient"
+                android:textSize="25sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="100dp"
+                />
+
+            <TextView
+                android:id="@+id/patient_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp"
+                android:text="Patient Name"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+                <Spinner
+                    android:id="@+id/patientsSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/inputtext_reg_design"
+                    android:padding="5dp"
+                    android:popupBackground="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/patient_name_tv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/department_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/patientsSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp"
+                android:text="Department Name"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/DepartmentsSpinner"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:background="@drawable/inputtext_reg_design"
+                android:padding="5dp"
+                android:popupBackground="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/department_name_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/doctor_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/patientsSpinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="60dp"
+                android:text="Doctor Name"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/DoctorsSpinner"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:background="@drawable/inputtext_reg_design"
+                android:padding="5dp"
+                android:popupBackground="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/doctor_name_tv"
+                app:layout_constraintStart_toStartOf="@id/doctor_name_tv"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/room_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/DepartmentsSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp"
+                android:text="Room Number"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/RoomsSpinner"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:background="@drawable/inputtext_reg_design"
+                android:padding="5dp"
+                android:popupBackground="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/room_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/bed_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/DoctorsSpinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="60dp"
+                android:text="Bed Number"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/BedsSpinner"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:background="@drawable/inputtext_reg_design"
+                android:padding="5dp"
+                android:popupBackground="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/bed_number_tv"
+                app:layout_constraintStart_toStartOf="@id/bed_number_tv"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/cause_of_Addmission_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/RoomsSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp"
+                android:text="Cause Of Admission"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/cause_of_Addmission_input"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:inputType="text|textMultiLine"
+                android:background="@drawable/inputtext_reg_design"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/cause_of_Addmission_tv"
+                app:layout_constraintStart_toStartOf="@id/cause_of_Addmission_tv"/>
+
+            <TextView
+                android:id="@+id/medical_history_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cause_of_Addmission_input"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="10dp"
+                android:text="Medical History"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/medical_history_input"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:inputType="text|textMultiLine"
+                android:background="@drawable/inputtext_reg_design"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/medical_history_tv"
+                app:layout_constraintStart_toStartOf="@id/medical_history_tv"/>
+
+    <Button
+        android:id="@+id/submitbtn_reservation"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/submitbtn"
+        android:backgroundTint="@color/blue"
+        android:padding="5dp"
+        android:text="submit"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/cancelbtn_reservation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/medical_history_input" />
+
+    <Button
+        android:id="@+id/cancelbtn_reservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/submitbtn"
+        android:padding="5dp"
+        android:text="cancel"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/submitbtn_reservation"
+        app:layout_constraintTop_toBottomOf="@id/medical_history_input" />
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </ScrollView>-->
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

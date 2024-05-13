@@ -7,7 +7,9 @@ data class InpatientDetails(val Name:String,
                             val VitalSignsImageId : Int,
                             val LabImageId : Int,
                             val ReportImageId : Int,
-                            val MedicineImageId : Int
+                            val MedicineImageId : Int,
+
+                            val AddVitalSignsImageId : Int? //nurse
                             
 
 )

@@ -40,7 +40,7 @@ class DoctorUserOutpatientFragment : Fragment() {
 
         adapter.onLabImgClickListener = object : OutPatientAdapter.OnImageClickListener{
             override fun onImageClick(pos: Int, item: OutPatientDetails) {
-                pushFragment(MakeLab_ScanFragment())
+                pushFragment(MakeScanFragment())
             }
         }
 

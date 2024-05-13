@@ -92,6 +92,15 @@
                 android:textSize="22sp"
                 android:text="Other Specialties"
                 />
+            <Button
+                android:id="@+id/ecgbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/Other_specialization"
+                app:layout_constraintStart_toEndOf="@id/Other_specialization"
+                android:text="ecg"
+                android:layout_marginStart="10dp"
+                />
 
             <LinearLayout
                 android:id="@+id/first_row_img"
@@ -406,12 +415,12 @@
                             />
 
 
-                        <androidx.constraintlayout.widget.Guideline
-                            android:id="@+id/guidLine"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintGuide_percent="0.5"/>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
 
                         <ImageView
                             android:id="@+id/doctor2_img"

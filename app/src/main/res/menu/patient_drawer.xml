@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+
+
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Profile"
+            android:icon="@drawable/ic_inpatient_blue"/>
+
+        <item
+            android:id="@+id/nav_show_appointment_patient"
+            android:title="Show Appointments"
+            android:icon="@drawable/ic_calender"/>
+
+        <item
+            android:id="@+id/nav_make_appointment_patient"
+            android:title="New Appointment"
+            android:icon="@drawable/ic_add_appointment"/>
+
+        <item
+            android:id="@+id/nav_show_lab_patient"
+            android:title="Show Lab Tests"
+            android:icon="@drawable/ic_test"/>
+
+        <item
+            android:id="@+id/nav_show_scan_patient"
+            android:title="Show Scans"
+            android:icon="@drawable/ic_scan"/>
+
+        <item
+            android:id="@+id/nav_show_prescription_patient"
+            android:title="Show Prescription"
+            android:icon="@drawable/ic_medicien"/>
+        
+        <item
+            android:id="@+id/nav_show_record_patient"
+            android:title="Previous Records"
+            android:icon="@drawable/ic_medical_record"/>
+
+
+
+        <item
+            android:id="@+id/nav_logout_patient"
+            android:title="logout"
+            android:icon="@drawable/ic_logout" />
+
+    </group>
+</menu>

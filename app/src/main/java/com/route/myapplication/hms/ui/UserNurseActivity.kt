@@ -1,5 +1,6 @@
 package com.route.myapplication.hms.ui
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
@@ -9,10 +10,14 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.internal.ContextUtils.getActivity
 import com.route.myapplication.hms.R
-import com.route.myapplication.hms.ui.DoctorUserFragments.*
+import com.route.myapplication.hms.ui.HomeFragments.HomePageFragment
+import com.route.myapplication.hms.ui.NurseUserFragments.NurseInpatientFragment
 import com.route.myapplication.hms.ui.NurseUserFragments.NurseUserLogoutFragment
-import com.route.myapplication.hms.ui.NurseUserFragments.NurseUserShowVitalSignsFragment
+import com.route.myapplication.hms.ui.NurseUserFragments.NurseUserProfileFragment
+import com.route.myapplication.hms.ui.NurseUserFragments.NurseUserReservePatientFragment
+import kotlinx.coroutines.Dispatchers.Main
 
 class UserNurseActivity : AppCompatActivity() {
 
@@ -21,6 +26,7 @@ class UserNurseActivity : AppCompatActivity() {
     lateinit var appBarLayout: AppBarLayout
     lateinit var drawerIcon : ImageView
     lateinit var homeIcon : ImageView
+    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_nurse)
@@ -46,29 +52,32 @@ class UserNurseActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
                 menuItem->
             menuItem.isChecked=true
-            if(menuItem.itemId == R.id.nav_add_vital_sign_nurse)
+            if(menuItem.itemId == R.id.nav_profile)
             {
-                pushFragment(NurseUserAddVitalSignFragment(),menuItem.title.toString())
+                pushFragment(NurseUserProfileFragment(),menuItem.title.toString())
 
-            } else if(menuItem.itemId == R.id.nav_show_vital_sign_nurse)
+            }
+            else if(menuItem.itemId == R.id.nurse_inpatient)
             {
-                pushFragment(NurseUserShowVitalSignsFragment(),menuItem.title.toString())
+                pushFragment(NurseInpatientFragment(),menuItem.title.toString())
 
-            } else if(menuItem.itemId == R.id.nav_show_medicines_nurse)
+            }
+            else if(menuItem.itemId == R.id.nav_reserve_patient)
             {
-                pushFragment(NurseUserShowMedicineFragment(),menuItem.title.toString())
+                pushFragment(NurseUserReservePatientFragment(),menuItem.title.toString())
 
             }
             else if(menuItem.itemId == R.id.nav_logout_nurse)
             {
-                pushFragment(NurseUserLogoutFragment(),menuItem.title.toString())
-
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
+                finish()
             }
 
             return@setNavigationItemSelectedListener true
         }
-        navView.setCheckedItem(R.id.nav_add_vital_sign_nurse)
-        pushFragment(NurseUserAddVitalSignFragment(),"Add vital sign")
+        navView.setCheckedItem(R.id.nav_profile)
+        pushFragment(NurseUserProfileFragment(),"Profile")
 
     }
 

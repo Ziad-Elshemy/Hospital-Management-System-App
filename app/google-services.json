@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "233362975263",
-    "project_id": "hospitalmanagementsystem-11b85",
-    "storage_bucket": "hospitalmanagementsystem-11b85.appspot.com"
+    "project_number": "895231857034",
+    "firebase_url": "https://wireless-ecg-esp32-default-rtdb.firebaseio.com",
+    "project_id": "wireless-ecg-esp32",
+    "storage_bucket": "wireless-ecg-esp32.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:233362975263:android:676e15b62c9aaf9178c32a",
+        "mobilesdk_app_id": "1:895231857034:android:57eb52dec9ca6be88c3873",
         "android_client_info": {
           "package_name": "com.route.myapplication.hms"
         }
       },
       "oauth_client": [
         {
-          "client_id": "233362975263-khuvn71c8ne1rreqlg9vh3on5s6t6g90.apps.googleusercontent.com",
+          "client_id": "895231857034-294p4jnmfrp7257dmtje4oihd2rrjno3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.route.myapplication.hms",
+            "certificate_hash": "660f5772993a7b5cdddd4509d089942fc787d951"
+          }
+        },
+        {
+          "client_id": "895231857034-0qi9bg2tuf43mv0vtlbb8uj5g7ghbsom.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCuYA5rUXSODEXWnVIgAAhkeCSY98swgTg"
+          "current_key": "AIzaSyC8UkvinpGc79QNAvw2h8QWdt19tuAB0lA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "233362975263-khuvn71c8ne1rreqlg9vh3on5s6t6g90.apps.googleusercontent.com",
+              "client_id": "895231857034-0qi9bg2tuf43mv0vtlbb8uj5g7ghbsom.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

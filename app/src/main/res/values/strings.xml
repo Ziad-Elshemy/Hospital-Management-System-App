@@ -23,6 +23,12 @@
     </string-array>
 
 
+    <string-array name="doctorClinic">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
     <string-array name="degreeOptions">
         <item>Select Degree:</item>
         <item>option1</item>
@@ -74,9 +80,32 @@
 
 
     <string-array name="DurationOptions">
-    <item>Days</item>
-    <item>Months</item>
-    <item>Years</item>
+        <item>Days</item>
+        <item>Months</item>
+        <item>Years</item>
+    </string-array>
+
+
+    <string-array name="DoseOptions">
+        <item>One Time </item>
+        <item>2 Times </item>
+        <item>3 Times </item>
+        <item>4 Times </item>
+        <item>5 Times </item>
+
+    </string-array>
+
+    <string-array name="ScanOptions">
+        <item>X-ray </item>
+        <item>X-ray with dye </item>
+        <item>rays of dye on the uterus and tubes </item>
+        <item>XMammography to detect breast tumors </item>
+        <item>Computer tomography, CT Scan</item>
+        <item>magnetic resonance imaging, MRI</item>
+        <item>television rays or ultrasound (sonar)</item>
+        <item>Three-dimensional and four-dimensional sonar</item>
+
+
     </string-array>
 
     <string-array name="MedicineTypeOptions">

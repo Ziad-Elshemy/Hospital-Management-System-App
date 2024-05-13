@@ -1,30 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.route.myapplication.hms" >
+    package="com.route.myapplication.hms">
 
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HMS" >
+        android:theme="@style/Theme.HMS"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.ui.BrainTumorClassification"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
-     See README(https://goo.gl/l4GJaQ) for more. -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name=".ui.SplashActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:theme="@style/Theme.AppCompat.Light.NoActionBar"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".ui.EcgSignalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.UserPatientActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HMS.NoActionBar" />
+        <activity
+            android:name=".ui.DoctorUserFragments.pdfActivity"
+            android:exported="false" />
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/hospital_notification_logo" />
-        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
-             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/blueDark" />
 
-        <receiver android:name=".Notification"
-            android:enabled="true"/>
+        <receiver
+            android:name=".NotificationDoctor"
+            android:enabled="true" />
+        <receiver
+            android:name=".NotificationNurse"
+            android:enabled="true" />
+        <receiver
+            android:name=".NotificationPatient"
+            android:enabled="true" />
 
         <activity
             android:name=".ui.UserDoctorActivity"
@@ -38,13 +83,7 @@
             android:theme="@style/Theme.HMS.NoActionBar" />
         <activity
             android:name=".ui.HomeActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"></activity>
 
         <service
             android:name=".MyFirebaseMessagingService"
@@ -59,8 +98,7 @@
             android:name=".ui.DashboardActivity"
             android:exported="true"
             android:label="@string/title_activity_dashboard"
-            android:theme="@style/Theme.HMS.NoActionBar" >
-        </activity>
+            android:theme="@style/Theme.HMS.NoActionBar" />
     </application>
 
 </manifest>
